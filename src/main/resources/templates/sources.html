@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Seznam zdrojů</title>
 </head>
 <body>
+<table>
+    <thead>
+    <th>Název</th>
+    <th>Zdroj</th>
+    </thead>
+<tbody>
+<tr th:each="source:${sources}">
+    <td><span th:text="${source.getName()}">Název</span></td>
+    <td><span th:text="${source.getSource()}">Zdroj</span></td>
+</tr>
+</tbody>
+
+
     <h1>Webík</h1>
     <p>Bla bla</p>
+
+</table>
 </body>
 </html>
