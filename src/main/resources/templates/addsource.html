@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new RSSSource</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+
+<h1>Nový zdroj</h1>
+<form action="#" th:action="@{/source}" th:object="${source}" method="post">
+    <p>Název <input type="text" th:field="*{name}"></p>
+    <p>Zdroj <input type="text" th:field="*{source}"></p>
+    <p><input type="submit" th:value="Odeslat"/><input type="reset" value="Reset"/></p>
+    <td><span th:text="${source.getSource()}">Zdroj</span></td>
+</form>
+
+</body>
+</html>
